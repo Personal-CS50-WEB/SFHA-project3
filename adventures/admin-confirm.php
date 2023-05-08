@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>confirm Trip</title>
     <?php include('../includes/head.html'); ?>
 </head>
-
 <body>
-
     <?php include('../includes/header.php'); ?>
     <main class='paddingTop'>
         <?php

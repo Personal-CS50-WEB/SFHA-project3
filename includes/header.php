@@ -21,6 +21,6 @@ session_start();
 <!-- creating side navbar -->
 <aside id="sidenav">
     <a href="#">Admin Login</a>
-    <a href="/project3/all-adventures.php">Adventures</a>
+    <a href="/project3/adventures/all-adventures.php">Adventures</a>
     <a href="/project3/adventures/admin-add.php">Add Tripe</a>
 </aside>

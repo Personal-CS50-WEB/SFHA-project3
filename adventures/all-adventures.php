@@ -1,19 +1,12 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Halifax Canoe and Kayak</title>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./css/main.css'>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src='./js/main.js'></script>
+    <?php include('../includes/head.html'); ?>
 </head>
-
 <body>
-    <?php include('./includes/header.php');
-    include('./includes/database.php'); ?>
+    <?php include('../includes/header.php');
+    include('../includes/database.php'); ?>
     <main>
 
         <section class="image-background">
@@ -42,4 +35,4 @@
 
         </section>
     </main>
-    <?php include('./includes/footer.html'); ?>
+    <?php include('../includes/footer.html'); ?>
