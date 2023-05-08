@@ -1,0 +1,316 @@
+/* 
+ensuring that padding and 
+borders are included in an 
+element's total width and height 
+*/
+* {
+    box-sizing: border-box;
+}
+
+/* set the font family for the body text */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 1rem;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 50px;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+button[type="submit"] {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #006C9B;
+}
+
+
+/* styles for the header element */
+header {
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 5px 7px 0 rgba(11, 4, 4, 0.833);
+    left: 0;
+    top: 0;
+    background-color: #3d4493;
+}
+
+/* styles for the navigation bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav>ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+nav ul li a {
+    text-align: center;
+    text-decoration: none;
+    color: #f5f2f2;
+    font-size: 2rem;
+    line-height: 2;
+}
+
+nav ul li button {
+    border: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+nav ul li img {
+    width: 50px;
+    border: 0;
+    height: 100%;
+}
+
+nav ul li:first-child {
+    margin-right: auto;
+}
+
+nav ul li:last-child {
+    margin-left: auto;
+}
+
+/* style for sidenav */
+#sidenav {
+    position: fixed;
+    top: 40px;
+    left: -200px;
+    /* hide the side nav by default */
+    width: 250px;
+    height: 100%;
+    background-color: #3d4493;
+    transition: left 0.3s ease-in-out;
+    /* add a transition effect */
+    display: none;
+    overflow-x: hidden;
+    padding-top: 60px;
+}
+
+#sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+}
+
+#sidenav a:hover,
+a:hover {
+    color: #818181;
+}
+
+/* styles for the main content container */
+main {
+    max-width: 1200px;
+    margin: 0 auto
+        /* Center the main content */
+
+}
+
+.paddingTop {
+    padding-top: 100px;
+    padding-bottom: 25px;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    margin: 0;
+}
+
+
+/* styles for the background image section  */
+.image-background {
+    background-image:
+        url(https://raw.githubusercontent.com/Zulinov/skillsProjects/main/canoe.jpg);
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    padding: 250px;
+    background-size: cover;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.container {
+    background-color: rgb(204, 204, 204);
+    text-align: center;
+    padding: 20px;
+}
+
+.link-container {
+    position: fixed;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+/* 
+This media query adjusts 
+the styles for the main content and 
+background image sections on smaller screens 
+*/
+@media (max-width: 1200px) {
+    main {
+        max-width: none;
+        width: 100%;
+    }
+
+    .image-background {
+        font-size: 3.5rem;
+        max-width: 100%;
+        padding: 250px 0 250px 0;
+    }
+
+    nav ul li img {
+        width: 30px;
+    }
+
+    #sidenav {
+        width: 200px;
+    }
+
+}
+
+/* set the font size for paragraph text */
+p {
+    font-size: 1.2rem;
+}
+
+h2 {
+    font-size: 4.5rem;
+    line-height: 20px;
+    font-weight: bold;
+
+}
+
+h3 a {
+    text-underline-offset: 12px;
+    font-size: 3rem;
+    color: #627fb5;
+}
+
+h4 {
+    font-size: 1.5rem;
+    line-height: 20px;
+    font-weight: normal;
+    margin: 0
+}
+
+/* Responsive styles for font sizes */
+@media screen and (max-width: 800px) {
+    h3 a {
+        font-size: 1.5rem;
+        text-underline-offset: 8px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: .9rem;
+    }
+
+    .image-background {
+        font-size: 20px;
+    }
+
+    #sidenav a {
+        font-size: 15px;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+    form {
+        
+        width: 100%;
+    
+    }
+}
+
+/* style for footer element */
+footer {
+    background-color: #3d3c3c67;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    left: 0;
+}
+
+
+.error-message {
+    background-color: #FFCCCC;
+    border: 1px solid #FF0000;
+    color: #FF0000;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
