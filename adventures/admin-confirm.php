@@ -48,7 +48,7 @@
                 printf("<h2>confirmation</h2><hr></hr><p>New Trip Has Been Added!</p>");
 
             }
-            printf("<br><h3><a href=../all-adventures.php>View All Adventures</a></h3>");
+            printf("<br><h3><a href=./all-adventures.php>View All Adventures</a></h3>");
             exit;
         }
 
