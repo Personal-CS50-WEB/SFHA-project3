@@ -19,7 +19,7 @@
 
             if (!$heading || !$tripDate || !$duration || !$summary) {
                 printf("You must fill all fields");
-                printf("<br><a href=../all-adventures.php>Return to home page </a>");
+                printf("<br><a href=./all-adventures.php>Return to home page </a>");
                 exit();
             }
             $heading = addslashes($heading);
