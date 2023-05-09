@@ -10,7 +10,6 @@
         <?php
 
         if (isset($_POST['heading'])) {
-
             // Get the data from the form
             $heading = trim($_POST["heading"]);
             $tripDate = trim($_POST["tripDate"]);
@@ -38,15 +37,12 @@
             if ($stmt->rowCount() > 0) {
                 // A matching record was found, display an error message
                 printf("<h2>Invalid Entry</h2><hr></hr><p class='error-message'>Adventure with the same details already exists!</p>");
-
             } else {
-
                 // Prepare an insert statement and execute it
                 $stmt = $db->prepare("insert into trip values (null, ?, ?, ?, ?)");
                 $stmt->execute(array("$heading", "$tripDate", "$duration", "$summary"));
 
                 printf("<h2>confirmation</h2><hr></hr><p>New Trip Has Been Added!</p>");
-
             }
             printf("<br><h3><a href=./all-adventures.php>View All Adventures</a></h3>");
             exit;
@@ -54,5 +50,6 @@
         else {
             header('Location: ./all-adventures.php');
         }
-
-        include('../includes/footer.html'); ?>
+        ?>
+    </main>
+    <?php   include('../includes/footer.html'); ?>
