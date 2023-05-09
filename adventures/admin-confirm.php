@@ -11,21 +11,17 @@
 
         if (isset($_POST['heading'])) {
             // Get the data from the form
-            $heading = trim($_POST["heading"]);
-            $tripDate = trim($_POST["tripDate"]);
-            $duration = trim($_POST["duration"]);
-            $summary = trim($_POST["summary"]);
+            $heading = addslashes(trim($_POST["heading"]));
+            $tripDate = addslashes(trim($_POST["tripDate"]));
+            $duration = addslashes(trim($_POST["duration"]));
+            $summary = addslashes(trim($_POST["summary"]));
 
             if (!$heading || !$tripDate || !$duration || !$summary) {
                 printf("You must fill all fields");
                 printf("<br><a href=./all-adventures.php>Return to home page </a>");
                 exit();
             }
-            $heading = addslashes($heading);
-            $tripDate = addslashes($tripDate);
-            $duration = addslashes($duration);
-            $summary = addslashes($summary);
-
+        
             include('../includes/database.php');
             // Check if a record with the same heading and tripDate already exists
             $stmt = $db->prepare("SELECT * FROM trip WHERE heading=:heading AND tripDate=:tripDate AND duration=:duration");
