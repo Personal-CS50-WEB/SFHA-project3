@@ -134,6 +134,7 @@ nav ul li:last-child {
     display: none;
     overflow-x: hidden;
     padding-top: 60px;
+    z-index: 1;
 }
 
 #sidenav a {
