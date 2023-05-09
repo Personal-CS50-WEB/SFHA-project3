@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!-- Creating the header section, which includes the navigation bar -->
 <header>
     <nav role="navigation">

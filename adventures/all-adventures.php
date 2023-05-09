@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Halifax Canoe and Kayak</title>
     <?php include('../includes/head.html'); ?>
 </head>
+
 <body>
     <?php include('../includes/header.php');
     include('../includes/database.php'); ?>
@@ -22,6 +24,7 @@
             // Retrieve all records from the trip table
             $stmt = $db->prepare("SELECT * FROM trip");
             $stmt->execute();
+            $hasTrips = false;
 
             //Adding an article for each adventure
             while ($row = $stmt->fetch()) {
@@ -31,6 +34,10 @@
                 echo "<p><strong>Duration: </strong>" . $row['duration'] . " days</p>";
                 echo "<h4>Summary</h4><p>" . $row['summary'] . "</p>";
                 echo "</article>";
+                $hasTrips = true;
+            }
+            if (!$hasTrips) { // check if there are no trips
+                echo "<p>No available trips.</p>";
             } ?>
 
         </section>

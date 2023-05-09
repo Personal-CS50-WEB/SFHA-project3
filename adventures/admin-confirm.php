@@ -51,5 +51,8 @@
             printf("<br><h3><a href=./all-adventures.php>View All Adventures</a></h3>");
             exit;
         }
+        else {
+            header('Location: ./all-adventures.php');
+        }
 
         include('../includes/footer.html'); ?>
